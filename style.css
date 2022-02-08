@@ -4,10 +4,6 @@
     --cor-button-teste: hsl(248, 32%, 49%);
 }
 
-html, body {
-    max-width: 1440px;
-}
-
 body {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
@@ -19,17 +15,22 @@ body {
 
 .container {
     display: flex;
-    width: 940px;
-    margin: 10em auto;
+    max-width: 1440px;
+    margin: 12em auto;
 }
 
 .sobre {
-    width: 55%;
+    width: 35%;
     margin: auto;
 }
 
+.sobre p {
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
 .titulo-principal {
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: bold;
     margin: 0 0 1em;
 }
@@ -39,9 +40,11 @@ body {
 }
 
 .formulario {
-    width: 45%;
+    width: 40%;
     box-shadow: 0 5px 0 0 rgba(83, 80, 80, 0.3);
     border-radius: 7px;
+    margin: 0 auto;
+    margin-left: 0;
 }
 
 .button-teste {
@@ -62,14 +65,16 @@ body {
     text-transform: uppercase;
     width: 83%;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .button-teste, .button-cadastro {
+    font-size: 1em;
     border: none;
     color: #FFFFFF;
     font-weight: bold;
     border-radius: 7px;
-    padding: 15px 50px;
+    padding: 20px 50px;
 }
 
 .cadastro {
@@ -84,10 +89,15 @@ body {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 15px;
-    padding: 10px 0 10px 10px;
+    padding: 15px 0 15px 10px;
     border-radius: 3px;
     border: 1px solid #CCCCCC;
 }
+
+/* mudar cor da borda do input ao clicar */
+/* .input-padrao: {
+    color: hsl(0, 100%, 74%);
+} */
 
 .termos {
     display: block;
@@ -96,6 +106,7 @@ body {
     font-size: 8px;
     width: 70%;
     margin: 10px auto;
+    text-align: center;
 }
 
 .termos a {
@@ -109,7 +120,14 @@ body {
     font-size: 13px;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1160px) {
+
+    .titulo-principal {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 962px) {
 
     .container {
         display: block;
@@ -125,7 +143,6 @@ body {
 
     .sobre p {
         font-weight: 400;
-        line-height: 1.5em;
     }
 
     .titulo-principal {
@@ -137,13 +154,35 @@ body {
     }
 }
 
-@media screen and (max-width: 420px) {
-    
+@media screen and (max-width: 430px) {
+
+    body {
+        background-image: url('images/bg-intro-mobile.png');
+    }
+
+    .button-teste span span {
+        display: block;
+    }
+
+    .button-teste {
+        padding: 20px 20px;
+    }
+
+    .button-cadastro {
+        padding: 20px 0;
+    }
+
     .termos {
         text-align: center;
     }
 
     .termos a {
         display: block;
+        margin-top: 1em;
+    }
+
+    .attribution span {
+        display: block;
+        margin-top: 1em;
     }
 }
