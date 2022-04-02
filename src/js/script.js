@@ -28,7 +28,9 @@ buttonCadastro.addEventListener("click", function() {
                 const spanErro = inputName.nextSibling.nextSibling;
                 spanErro.innerText = "";
             }
-    
+        });
+
+        inputLastName.addEventListener("keyup", function() {
             if(!inputLastName.value) {
                 temErro = true;
     
@@ -44,7 +46,9 @@ buttonCadastro.addEventListener("click", function() {
                 const spanErro = inputLastName.nextSibling.nextSibling;
                 spanErro.innerText = "";
             }
-    
+        });
+
+        inputEmail.addEventListener("keyup", function() {
             if(!inputEmail.value) {
                 temErro = true;
     
@@ -60,7 +64,9 @@ buttonCadastro.addEventListener("click", function() {
                 const spanErro = inputEmail.nextSibling.nextSibling;
                 spanErro.innerText = "";
             }
-    
+        });
+
+        inputPassword.addEventListener("keyup", function() {
             if(!inputPassword.value) {
                 temErro = true;
     
@@ -77,6 +83,7 @@ buttonCadastro.addEventListener("click", function() {
                 spanErro.innerText = "";
             }
         });
+  
 
         let temErro = false;
 
