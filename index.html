@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="src/css/reset.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/css/style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -42,19 +42,33 @@
         </p>
       </div> 
   
-        <form class="formulario" action="#">
+        <form id="formulario" action="newpage.html">
           <button class="button-teste" type="submit">Try it free 7 days <span>then <span>$20/mo. thereafter</span></span></button>    
           
           <fieldset class="cadastro">
-            <input class="input-padrao" type="text" placeholder="First Name" required>
-            <input class="input-padrao" type="text" placeholder="Last Name" required>
-            <input class="input-padrao" type="email" placeholder="Email Address" required>
-            <input class="input-padrao" type="password" placeholder="Password" required>
-            <input class="button-cadastro" type="submit" value="Claim your free trial">
-        
-            <label class="termos" for="">
-              By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
-            </label>
+            <div class="content">
+              <input class="input-padrao" type="text" placeholder="First Name" name="input-name">
+              
+              <span class="input-mensagem-erro"></span>
+
+              <input class="input-padrao" type="text" placeholder="Last Name" name="input-last-name">
+
+              <span class="input-mensagem-erro"></span>
+
+              <input class="input-padrao" type="email" placeholder="Email Address" name="input-email">
+
+              <span class="input-mensagem-erro"></span>
+              
+              <input class="input-padrao" type="password" placeholder="Password" name="input-password">
+
+              <span class="input-mensagem-erro"></span>
+
+              <input class="button-cadastro" type="submit" value="Claim your free trial">
+
+              <label class="termos" for="">
+                By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
+              </label>
+            </div>
           </fieldset>       
         </form>
     </div>   
@@ -66,5 +80,7 @@
       <span>Coded by <a href="https://www.github.com/thiagoa-martins/" target="_blank">Thiago Martins</a>.</span>
     </p>
   </footer>
+
+  <script src="src/js/script.js"></script>
 </body>
 </html>
