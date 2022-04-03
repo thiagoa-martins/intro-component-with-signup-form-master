@@ -107,24 +107,29 @@ body {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 15px;
-    padding: 15px 0 15px 10px;
-    border-radius: 3px;
-    border: 1px solid #CCCCCC;
+    padding: 15px 30px 15px 30px;
+    border-radius: 5px;
+    border: 2px solid #CCCCCC;
+}
+
+.input-padrao:focus {
+    border: 2px solid black;
+    outline: none;
 }
 
 .input-padrao-erro {
     border: 2px solid var(--cor-fundo);
     margin-bottom: 0.5em;
     outline-color: var(--cor-fundo);
+    background-image: url(../images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
 }
 
 .input-padrao-erro::placeholder {
-    background-image: url(../images/icon-error.svg);
-    background-repeat: no-repeat;
-    background-position-x: right;
-    padding: 5px 0 5px 0;
-    margin-right: 15px;
     color: var(--cor-fundo);
+    opacity: 1;
 }
 
 .input-mensagem-erro {
