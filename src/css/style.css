@@ -98,7 +98,7 @@ body {
 }
 
 .register .content {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -108,7 +108,7 @@ body {
     margin: 0 auto;
     margin-bottom: 15px;
     padding: 15px 30px 15px 30px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 2px solid #CCCCCC;
 }
 
@@ -203,7 +203,15 @@ body {
     .form-style {
         width: auto;
     }
+
+    .register .content {
+        width: 90%;
+    }
 }
+
+/* @media screen and (max-width: 800px) {
+    
+} */
 
 @media screen and (max-width: 430px) {
 
@@ -217,6 +225,10 @@ body {
 
     .button-test {
         padding: 20px 20px;
+    }
+
+    .register .content {
+        width: 85%;
     }
 
     .button-register {
@@ -236,4 +248,6 @@ body {
         display: block;
         margin-top: 1em;
     }
+
+    
 }
