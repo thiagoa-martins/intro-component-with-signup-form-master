@@ -1,5 +1,6 @@
 const formulario = document.querySelector("#formulario");
 const inputPadrao = document.querySelectorAll(".input-padrao");
+const buttonTeste = document.querySelector(".button-teste");
 const buttonCadastro = document.querySelector(".button-cadastro");
 
 const inputName = document.forms["formulario"]["input-name"];
@@ -7,6 +8,21 @@ const inputLastName = document.forms["formulario"]["input-last-name"];
 const inputEmail = document.forms["formulario"]["input-email"];
 const inputPassword = document.forms["formulario"]["input-password"];
 
+buttonTeste.addEventListener("click", function() {
+    formulario.addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+    });
+
+    const spanCadastro = buttonTeste.nextSibling.nextSibling;
+    spanCadastro.innerText = "Register!"
+    spanCadastro.classList.add("input-mensagem-cadastro");
+
+    setTimeout(function() {
+        spanCadastro.innerText = "";
+        spanCadastro.classList.remove("input-mensagem-cadastro")
+    }, 5000);
+});
 
 buttonCadastro.addEventListener("click", function() {
     formulario.onsubmit = function(e) {

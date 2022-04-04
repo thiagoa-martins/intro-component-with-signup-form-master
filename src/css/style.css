@@ -132,7 +132,8 @@ body {
     opacity: 1;
 }
 
-.input-mensagem-erro {
+.input-mensagem-erro,
+.input-mensagem-cadastro {
     display: block;
     text-align: right;
     color: var(--cor-fundo);
@@ -141,6 +142,12 @@ body {
     margin-bottom: 2em;
     font-style: italic;
     font-weight: 600;
+}
+
+.input-mensagem-cadastro {
+    color: white;
+    font-size: 1em;
+    margin-bottom: 1em;
 }
 
 .termos {
