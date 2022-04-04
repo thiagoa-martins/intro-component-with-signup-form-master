@@ -1,7 +1,7 @@
 :root {
-    --cor-fundo: hsl(0, 100%, 74%);
-    --cor-button-cadastro: hsl(154, 59%, 51%);
-    --cor-button-teste: hsl(248, 32%, 49%);
+    --color-primary: hsl(0, 100%, 74%);
+    --color-button-register: hsl(154, 59%, 51%);
+    --color-button-test: hsl(248, 32%, 49%);
 }
 
 * {
@@ -12,7 +12,7 @@ body {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     background-image: url('../images/bg-intro-desktop.png');
-    background-color: var(--cor-fundo);
+    background-color: var(--color-primary);
     background-repeat: no-repeat;
     color: #FFFFFF;
 }
@@ -23,27 +23,27 @@ body {
     margin: 12em auto;
 }
 
-.sobre {
+.about {
     width: 35%;
     margin: auto;
 }
 
-.sobre p {
+.about p {
     line-height: 1.5em;
     font-weight: 500;
 }
 
-.titulo-principal {
+.title-main {
     font-size: 3em;
     font-weight: bold;
     margin: 0 0 1em;
 }
 
-.titulo-principal span {
+.title-main span {
     display: block;
 }
 
-#formulario {
+.form-style {
     width: 40%;
     box-shadow: 0 5px 0 0 rgba(83, 80, 80, 0.3);
     border-radius: 7px;
@@ -51,37 +51,37 @@ body {
     margin-left: 0;
 }
 
-.button-teste {
-    background-color: var(--cor-button-teste);
+.button-test {
+    background-color: var(--color-button-test);
     width: 100%;
     margin: 0 0 1em;
     box-shadow: 0 5px 0 0 rgba(83, 80, 80, 0.3);
     cursor: pointer;
 }
 
-.button-teste:hover {
+.button-test:hover {
     background-color: rgb(30, 17, 148);
 }
 
-.button-teste span {
+.button-test span {
     font-weight: 500;
     color: #CCCCCC;
 }
 
-.button-cadastro {
+.button-register {
     display: block;
-    background-color: var(--cor-button-cadastro);
+    background-color: var(--color-button-register);
     text-transform: uppercase;
     width: 100%;
     margin: 0 auto;
     cursor: pointer;
 }
 
-.button-cadastro:hover {
+.button-register:hover {
     background-color: hsl(154, 85%, 29%);
 }
 
-.button-teste, .button-cadastro {
+.button-test, .button-register {
     font-size: 1em;
     border: none;
     color: #FFFFFF;
@@ -90,19 +90,19 @@ body {
     padding: 20px 50px;
 }
 
-.cadastro {
+.register {
     width: 100%;
     background-color: #FFFFFF;
     padding: 2em 0 2em;
     border-radius: 7px;
 }
 
-.cadastro .content {
+.register .content {
     width: 80%;
     margin: 0 auto;
 }
 
-.input-padrao {   
+.input-default {   
     display: block;
     width: 100%;
     margin: 0 auto;
@@ -112,31 +112,31 @@ body {
     border: 2px solid #CCCCCC;
 }
 
-.input-padrao:focus {
+.input-default:focus {
     border: 2px solid black;
     outline: none;
 }
 
-.input-padrao-erro {
-    border: 2px solid var(--cor-fundo);
+.input-default-error {
+    border: 2px solid var(--color-primary);
     margin-bottom: 0.5em;
-    outline-color: var(--cor-fundo);
+    outline-color: var(--color-primary);
     background-image: url(../images/icon-error.svg);
     background-repeat: no-repeat;
     background-position: right center;
     background-origin: content-box;
 }
 
-.input-padrao-erro::placeholder {
-    color: var(--cor-fundo);
+.input-default-error::placeholder {
+    color: var(--color-primary);
     opacity: 1;
 }
 
-.input-mensagem-erro,
-.input-mensagem-cadastro {
+.input-message-error,
+.input-message-register {
     display: block;
     text-align: right;
-    color: var(--cor-fundo);
+    color: var(--color-primary);
     right: 0;
     font-size: 10px;
     margin-bottom: 2em;
@@ -144,13 +144,13 @@ body {
     font-weight: 600;
 }
 
-.input-mensagem-cadastro {
+.input-message-register {
     color: white;
     font-size: 1em;
     margin-bottom: 1em;
 }
 
-.termos {
+.terms {
     display: block;
     font-weight: 200;
     color: #a5a4a4;
@@ -160,20 +160,20 @@ body {
     text-align: center;
 }
 
-.termos a {
+.terms a {
     color: #d15050;
     font-weight: bold;
     text-decoration: none;
 }
 
-.input-padrao::placeholder {
+.input-default::placeholder {
     font-weight: 600;
     font-size: 13px;
 }
 
 @media screen and (max-width: 1160px) {
 
-    .titulo-principal {
+    .title-main {
         font-size: 2.5em;
     }
 }
@@ -186,21 +186,21 @@ body {
         margin: 0 1em;
     }
 
-    .sobre {
+    .about {
         width: auto;
         text-align: center;
         margin: 6em 0 4em;
     }
 
-    .sobre p {
+    .about p {
         font-weight: 400;
     }
 
-    .titulo-principal {
+    .title-main {
         font-size: 1.7em;
     }
 
-    #formulario {
+    .form {
         width: auto;
     }
 }
@@ -211,23 +211,23 @@ body {
         background-image: url('../images/bg-intro-mobile.png');
     }
 
-    .button-teste span span {
+    .button-test span span {
         display: block;
     }
 
-    .button-teste {
+    .button-test {
         padding: 20px 20px;
     }
 
-    .button-cadastro {
+    .button-register {
         padding: 20px 0;
     }
 
-    .termos {
+    .terms {
         text-align: center;
     }
 
-    .termos a {
+    .terms a {
         display: block;
         margin-top: 1em;
     }

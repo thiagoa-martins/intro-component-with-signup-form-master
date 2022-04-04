@@ -1,174 +1,174 @@
-const formulario = document.querySelector("#formulario");
-const inputPadrao = document.querySelectorAll(".input-padrao");
-const buttonTeste = document.querySelector(".button-teste");
-const buttonCadastro = document.querySelector(".button-cadastro");
+const form = document.querySelector("#form");
+const inputDefault = document.querySelectorAll(".input-default");
+const buttonTest = document.querySelector(".button-test");
+const buttonRegister = document.querySelector(".button-register");
 
-const inputName = document.forms["formulario"]["input-name"];
-const inputLastName = document.forms["formulario"]["input-last-name"];
-const inputEmail = document.forms["formulario"]["input-email"];
-const inputPassword = document.forms["formulario"]["input-password"];
+const inputName = document.forms["form"]["input-name"];
+const inputLastName = document.forms["form"]["input-last-name"];
+const inputEmail = document.forms["form"]["input-email"];
+const inputPassword = document.forms["form"]["input-password"];
 
-buttonTeste.addEventListener("click", function() {
-    formulario.addEventListener("submit", function(e) {
+buttonTest.addEventListener("click", function() {
+    form.addEventListener("submit", function(e) {
         e.preventDefault();
         
     });
 
-    const spanCadastro = buttonTeste.nextSibling.nextSibling;
-    spanCadastro.innerText = "Register!"
-    spanCadastro.classList.add("input-mensagem-cadastro");
+    const spanRegister = buttonTest.nextSibling.nextSibling;
+    spanRegister.innerText = "Register!"
+    spanRegister.classList.add("input-message-register");
 
     setTimeout(function() {
-        spanCadastro.innerText = "";
-        spanCadastro.classList.remove("input-mensagem-cadastro")
+        spanRegister.innerText = "";
+        spanRegister.classList.remove("input-message-register")
     }, 5000);
 });
 
-buttonCadastro.addEventListener("click", function() {
-    formulario.onsubmit = function(e) {
+buttonRegister.addEventListener("click", function() {
+    form.onsubmit = function(e) {
         e.preventDefault();
 
         inputName.addEventListener("keyup", function() {
             if(!inputName.value) {
-                temErro = true;
+                hasError = true;
     
                 inputName.placeholder = " ";
-                inputName.classList.add("input-padrao-erro");
+                inputName.classList.add("input-default-error");
     
-                const spanErro = inputName.nextSibling.nextSibling;
-                spanErro.innerText = "First Name cannot be empty";
+                const spanError = inputName.nextSibling.nextSibling;
+                spanError.innerText = "First Name cannot be empty";
             } else {
                 inputName.placeholder = "First Name";
-                inputName.classList.remove("input-padrao-erro");
+                inputName.classList.remove("input-default-error");
                 
-                const spanErro = inputName.nextSibling.nextSibling;
-                spanErro.innerText = "";
+                const spanError = inputName.nextSibling.nextSibling;
+                spanError.innerText = "";
             }
         });
 
         inputLastName.addEventListener("keyup", function() {
             if(!inputLastName.value) {
-                temErro = true;
+                hasError = true;
     
                 inputLastName.placeholder = " ";
-                inputLastName.classList.add("input-padrao-erro");
+                inputLastName.classList.add("input-default-error");
     
-                const spanErro = inputLastName.nextSibling.nextSibling;
-                spanErro.innerText = "Last Name cannot be empty";
+                const spanError = inputLastName.nextSibling.nextSibling;
+                spanError.innerText = "Last Name cannot be empty";
             } else {
                 inputLastName.placeholder = "Last Name";
-                inputLastName.classList.remove("input-padrao-erro");
+                inputLastName.classList.remove("input-default-error");
     
-                const spanErro = inputLastName.nextSibling.nextSibling;
-                spanErro.innerText = "";
+                const spanError = inputLastName.nextSibling.nextSibling;
+                spanError.innerText = "";
             }
         });
 
         inputEmail.addEventListener("keyup", function() {
             if(!inputEmail.value) {
-                temErro = true;
+                hasError = true;
     
                 inputEmail.placeholder = "email@example/com";
-                inputEmail.classList.add("input-padrao-erro");
+                inputEmail.classList.add("input-default-error");
     
-                const spanErro = inputEmail.nextSibling.nextSibling;
-                spanErro.innerText = "Looks like this is not on email";
+                const spanError = inputEmail.nextSibling.nextSibling;
+                spanError.innerText = "Looks like this is not on email";
             } else {
                 inputEmail.placeholder = "Email Address";
-                inputEmail.classList.remove("input-padrao-erro");
+                inputEmail.classList.remove("input-default-error");
     
-                const spanErro = inputEmail.nextSibling.nextSibling;
-                spanErro.innerText = "";
+                const spanError = inputEmail.nextSibling.nextSibling;
+                spanError.innerText = "";
             }
         });
 
         inputPassword.addEventListener("keyup", function() {
             if(!inputPassword.value) {
-                temErro = true;
+                hasError = true;
     
                 inputPassword.placeholder = " ";
-                inputPassword.classList.add("input-padrao-erro");
+                inputPassword.classList.add("input-default-error");
     
-                const spanErro = inputPassword.nextSibling.nextSibling;
-                spanErro.innerText = "Password cannot be empty";
+                const spanError = inputPassword.nextSibling.nextSibling;
+                spanError.innerText = "Password cannot be empty";
             } else {
                 inputPassword.placeholder = "Password";
-                inputPassword.classList.remove("input-padrao-erro");
+                inputPassword.classList.remove("input-default-error");
     
-                const spanErro = inputPassword.nextSibling.nextSibling;
-                spanErro.innerText = "";
+                const spanError = inputPassword.nextSibling.nextSibling;
+                spanError.innerText = "";
             }
         });
   
 
-        let temErro = false;
+        let hasError = false;
 
         if(!inputName.value) {
-            temErro = true;
+            hasError = true;
 
             inputName.placeholder = " ";
-            inputName.classList.add("input-padrao-erro");
+            inputName.classList.add("input-default-error");
 
-            const spanErro = inputName.nextSibling.nextSibling;
-            spanErro.innerText = "First Name cannot be empty";
+            const spanError = inputName.nextSibling.nextSibling;
+            spanError.innerText = "First Name cannot be empty";
         } else {
             inputName.placeholder = "First Name";
-            inputName.classList.remove("input-padrao-erro");
+            inputName.classList.remove("input-default-error");
             
-            const spanErro = inputName.nextSibling.nextSibling;
-            spanErro.innerText = "";
+            const spanError = inputName.nextSibling.nextSibling;
+            spanError.innerText = "";
         }
 
         if(!inputLastName.value) {
-            temErro = true;
+            hasError = true;
 
             inputLastName.placeholder = " ";
-            inputLastName.classList.add("input-padrao-erro");
+            inputLastName.classList.add("input-default-error");
 
-            const spanErro = inputLastName.nextSibling.nextSibling;
-            spanErro.innerText = "Last Name cannot be empty";
+            const spanError = inputLastName.nextSibling.nextSibling;
+            spanError.innerText = "Last Name cannot be empty";
         } else {
             inputLastName.placeholder = "Last Name";
-            inputLastName.classList.remove("input-padrao-erro");
+            inputLastName.classList.remove("input-default-error");
 
-            const spanErro = inputLastName.nextSibling.nextSibling;
-            spanErro.innerText = "";
+            const spanError = inputLastName.nextSibling.nextSibling;
+            spanError.innerText = "";
         }
 
         if(!inputEmail.value) {
-            temErro = true;
+            hasError = true;
 
             inputEmail.placeholder = "email@example/com";
-            inputEmail.classList.add("input-padrao-erro");
+            inputEmail.classList.add("input-default-error");
 
-            const spanErro = inputEmail.nextSibling.nextSibling;
-            spanErro.innerText = "Looks like this is not on email";
+            const spanError = inputEmail.nextSibling.nextSibling;
+            spanError.innerText = "Looks like this is not on email";
         } else {
             inputEmail.placeholder = "Email Address";
-            inputEmail.classList.remove("input-padrao-erro");
+            inputEmail.classList.remove("input-default-error");
 
-            const spanErro = inputEmail.nextSibling.nextSibling;
-            spanErro.innerText = "";
+            const spanError = inputEmail.nextSibling.nextSibling;
+            spanError.innerText = "";
         }
 
         if(!inputPassword.value) {
-            temErro = true;
+            hasError = true;
 
             inputPassword.placeholder = " ";
-            inputPassword.classList.add("input-padrao-erro");
+            inputPassword.classList.add("input-default-error");
 
-            const spanErro = inputPassword.nextSibling.nextSibling;
-            spanErro.innerText = "Password cannot be empty";
+            const spanError = inputPassword.nextSibling.nextSibling;
+            spanError.innerText = "Password cannot be empty";
         } else {
             inputPassword.placeholder = "Password";
-            inputPassword.classList.remove("input-padrao-erro");
+            inputPassword.classList.remove("input-default-error");
 
-            const spanErro = inputPassword.nextSibling.nextSibling;
-            spanErro.innerText = "";
+            const spanError = inputPassword.nextSibling.nextSibling;
+            spanError.innerText = "";
         }
 
-        if(!temErro) {
-            formulario.submit();
+        if(!hasError) {
+            form.submit();
         }
     }
 });
