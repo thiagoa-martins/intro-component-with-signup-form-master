@@ -29,6 +29,25 @@ buttonRegister.addEventListener("click", function() {
         e.preventDefault();
 
         inputName.addEventListener("keyup", function() {
+            checkName();   
+        });
+
+        inputLastName.addEventListener("keyup", function() {
+            checkLastName();
+        });
+
+        inputEmail.addEventListener("keyup", function() {
+            checkEmail();
+        });
+
+        inputPassword.addEventListener("keyup", function() {
+            checkPassword();
+        });
+  
+
+        let hasError = false;
+
+        function checkName() {
             if(!inputName.value) {
                 hasError = true;
     
@@ -44,9 +63,9 @@ buttonRegister.addEventListener("click", function() {
                 const spanError = inputName.nextSibling.nextSibling;
                 spanError.innerText = "";
             }
-        });
+        }
 
-        inputLastName.addEventListener("keyup", function() {
+        function checkLastName() {
             if(!inputLastName.value) {
                 hasError = true;
     
@@ -62,9 +81,9 @@ buttonRegister.addEventListener("click", function() {
                 const spanError = inputLastName.nextSibling.nextSibling;
                 spanError.innerText = "";
             }
-        });
-
-        inputEmail.addEventListener("keyup", function() {
+        }
+        
+        function checkEmail() {
             if(!inputEmail.value) {
                 hasError = true;
     
@@ -80,9 +99,9 @@ buttonRegister.addEventListener("click", function() {
                 const spanError = inputEmail.nextSibling.nextSibling;
                 spanError.innerText = "";
             }
-        });
-
-        inputPassword.addEventListener("keyup", function() {
+        }
+       
+        function checkPassword() {
             if(!inputPassword.value) {
                 hasError = true;
     
@@ -98,74 +117,12 @@ buttonRegister.addEventListener("click", function() {
                 const spanError = inputPassword.nextSibling.nextSibling;
                 spanError.innerText = "";
             }
-        });
-  
-
-        let hasError = false;
-
-        if(!inputName.value) {
-            hasError = true;
-
-            inputName.placeholder = " ";
-            inputName.classList.add("input-default-error");
-
-            const spanError = inputName.nextSibling.nextSibling;
-            spanError.innerText = "First Name cannot be empty";
-        } else {
-            inputName.placeholder = "First Name";
-            inputName.classList.remove("input-default-error");
-            
-            const spanError = inputName.nextSibling.nextSibling;
-            spanError.innerText = "";
         }
-
-        if(!inputLastName.value) {
-            hasError = true;
-
-            inputLastName.placeholder = " ";
-            inputLastName.classList.add("input-default-error");
-
-            const spanError = inputLastName.nextSibling.nextSibling;
-            spanError.innerText = "Last Name cannot be empty";
-        } else {
-            inputLastName.placeholder = "Last Name";
-            inputLastName.classList.remove("input-default-error");
-
-            const spanError = inputLastName.nextSibling.nextSibling;
-            spanError.innerText = "";
-        }
-
-        if(!inputEmail.value) {
-            hasError = true;
-
-            inputEmail.placeholder = "email@example/com";
-            inputEmail.classList.add("input-default-error");
-
-            const spanError = inputEmail.nextSibling.nextSibling;
-            spanError.innerText = "Looks like this is not on email";
-        } else {
-            inputEmail.placeholder = "Email Address";
-            inputEmail.classList.remove("input-default-error");
-
-            const spanError = inputEmail.nextSibling.nextSibling;
-            spanError.innerText = "";
-        }
-
-        if(!inputPassword.value) {
-            hasError = true;
-
-            inputPassword.placeholder = " ";
-            inputPassword.classList.add("input-default-error");
-
-            const spanError = inputPassword.nextSibling.nextSibling;
-            spanError.innerText = "Password cannot be empty";
-        } else {
-            inputPassword.placeholder = "Password";
-            inputPassword.classList.remove("input-default-error");
-
-            const spanError = inputPassword.nextSibling.nextSibling;
-            spanError.innerText = "";
-        }
+        
+        checkName();
+        checkLastName();
+        checkEmail();
+        checkPassword();
 
         if(!hasError) {
             form.submit();
